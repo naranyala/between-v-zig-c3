@@ -258,4 +258,42 @@ A comparison of three modern systems programming languages that aim to improve u
 
 ---
 
+## Context performance (real examples)
+
+This repository includes a small benchmark harness that builds (when compilers are available) and runs the examples in ./examples to compare runtime (wall-clock) between V, Zig, and C3. Results are written to results/bench_results.md.
+
+To run the benchmark:
+
+1. Ensure compilers/tools are installed and on PATH: `v` (V), `zig` (Zig), `c3c` (C3). If a compiler is missing, the script will skip that language and will attempt to run any prebuilt binaries found in each example directory.
+
+2. Run:
+
+    ./scripts/bench_examples.sh [runs]
+
+   where `[runs]` (optional) is the number of runs to average (default: 5). Example:
+
+    ./scripts/bench_examples.sh 5
+
+3. View results:
+
+    results/bench_results.md
+
+Sample output is written to `results/bench_results.md` when available. The script is safe to run repeatedly; build artifacts are written to `.build/`.
+
+---
+
+## References
+
+- [Comparison of programming languages](https://en.wikipedia.org/wiki/Comparison_of_programming_languages)
+- [Systems programming language](https://en.wikipedia.org/wiki/Systems_programming_language)
+- [Memory management](https://en.wikipedia.org/wiki/Memory_management)
+- [Garbage collection (computer science)](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science))
+- [Error handling](https://en.wikipedia.org/wiki/Error_handling)
+- [Concurrency (computer science)](https://en.wikipedia.org/wiki/Concurrency_(computer_science))
+- [Foreign function interface](https://en.wikipedia.org/wiki/Foreign_function_interface)
+- [C (programming language)](https://en.wikipedia.org/wiki/C_(programming_language))
+- [Zig (programming language)](https://en.wikipedia.org/wiki/Zig_(programming_language))
+
+---
+
 *Last updated: July 2026*
